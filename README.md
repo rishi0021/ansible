@@ -1,4 +1,4 @@
-# ansible day 15 /Abhsekh veeramala
+# ansible day 15 /Abhisekh veeramala
 
 steps to connect two ubuntu machine as passwordless
 1. install Ansible
@@ -6,7 +6,9 @@ steps to connect two ubuntu machine as passwordless
   $ sudo apt install software-properties-common
   $ sudo add-apt-repository --yes --update ppa:ansible/ansible
   $ sudo apt install ansible
+
 2. create 2 ec2 instances (main->"ansible" ,target->"target")
+
 3. in main enter "ssh-keygen"
    Output
    $ Generating public/private rsa key pair.
@@ -31,8 +33,12 @@ steps to connect two ubuntu machine as passwordless
     |        .=.+     |
     |       .oo+      |
     +----[SHA256]-----+
+
 4. copy public key of main ie .pub file
-5. paset the key in authorize_key file and save the file
+
+5. paste the key in authorize_key file and save the file
+
 6. enter ssh private ip of target from main
+
 7. you are connected 
    
