@@ -1,0 +1,16 @@
+#file starts here
+---
+- name: install and Start nginx
+  hosts: all
+  become: root
+
+  tasks:
+    - name: Install nginx
+      apt: 
+       name: nginx
+       state: present
+    - name: Start nginx
+      state: started
+#file ends
+# to run file
+~/ansible$ ansible-playbook -v -i inventory nginx.yml
